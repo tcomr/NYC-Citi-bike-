@@ -18,7 +18,7 @@ Through this project, I want to help Citi Bike maximize its revenue by applying 
 
 # Process
 
-The data was collected directly from NYC Citi Bike database website. I downloaded the data from [Citi Bike website .](https://s3.amazonaws.com/tripdata/index.html). I analyzed last Twelve months of NYC City Citi Bike data ranging from March 2019 to February 2020. There were over 13million rows of data from which I selected 104 thousand rows of data for station ID: 519 after doing initial EDA.
+The data was collected directly from NYC Citi Bike database website. I downloaded the data from [Citi Bike website](https://s3.amazonaws.com/tripdata/index.html). I analyzed last Twelve months of NYC City Citi Bike data ranging from March 2019 to February 2020. There were over 13million rows of data from which I selected 104 thousand rows of data for station ID: 519 after doing initial EDA.
 
 # Steps taken  for the project:
 * Downloaded the data from NYC Citi Bike 
@@ -35,45 +35,40 @@ The data was collected directly from NYC Citi Bike database website. I downloade
 # Most rides hourly, daily, weekly
 
 As one would expect, the most rides occured in the evening rush hour around 5pm with second peak during morning rush hour around 9am.
-![](img/Total_crashes_2017_.png)
+![](img/Hourly_rides.png)
 
 Daily trend over a year: 
-![](img/death_plot.png)
+![](img/Daily_rides_[Raw_Data].png )
 
 Weekly trend: Weekend has lower rides as compared to weekday: 
 
-![](img/top10_reasons_of_crash.png)
+![](img/Weekly_riding_trend.png)
 
 
 # Data Imputation 
 Out of considered 365 days, 109 days of data was missing. Five different imputation techniques - Fillmedian, Rolling Median, Interpolate Linear, InterpolateTime, and Linear regression -  were considered and  tested for better prediction for missing values. The different technique has been given 
-Rolling Median and InterpolateTIme:
-![](img/top10_reasons_of_crash.png)
+Rolling Median and InterpolateLinear:
+![](img/roollingmed_interpolate.png)
 
-FillMedian and InterpoleLinear
-![](img/top10_reasons_of_crash.png)
+FillMedian and InterpolateTime
+![](img/FillMedian_interpolateTime.png)
 
-Raw data and Linear Regression
-![](img/top10_reasons_of_crash.png)
+Data with complete dates after imputation with Linear Regression
+![](img/linear_reg.png)
 
-Linear Regression imputation: Decomposition 
-![](img/killed_different_st.png)
-
+Decomposition grpah with raw data, trend, reasonal, and error: 
+![](img/Seasonal_Decompose.png)
 
 
 # ARIMA Model: 
 ARIMA (Auto Regressive Integrated Moving Average) model explains a given time series model based on its own past values, that is, its own lags and the lagged forecast errors, so that equation can be used to forecast future values. ARIMA model with parameters (4,1,2) was used to make prediction. 
 
-ARIMA model fit 
-![](img/killed_different_st.png)
 
-ARIMA model prediction with 95% confidence interval. 
-![](img/street_names.png)
+ARIMA model testing with 95% confidence interval. 
+![](img/ARIMA_testing.png)
 
 ARIMA residual errors and Density curve :
-![](img/killed_different_st.png)
-![](img/killed_different_st.png)
-# Conclusion :
+![](img/Residual.png)
 
 # What Next? 
 * Tune up model
