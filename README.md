@@ -1,5 +1,4 @@
-# Predicting Citi Bike Rides on different stations   :
-# Provide a bike for each rider, who wants it
+# Predicting Citi Bike Rides : Everyone gets a bike 
 
 Data for this project is available on [NYC Citi Bike Website](https://s3.amazonaws.com/tripdata/index.html). Data was cleaned and modified for this project.
 
